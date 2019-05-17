@@ -5,7 +5,7 @@
 
 
 int main() {
-    FileSystem my_fs(512, 32768);
+    FileSystem my_fs("../ContinuousDrive", 512);
     zmq::context_t context(1);
     zmq::socket_t socket(context, ZMQ_REP);
 
