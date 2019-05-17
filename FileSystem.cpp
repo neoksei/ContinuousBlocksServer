@@ -26,7 +26,7 @@ FileSystem::FileSystem(const char *dump_file, size_t _cluster_size) {
     table_index = 0;
 
     for (size_t i = sizeof(size_t) * n_clusters; i < sizeof(Record)* 512 + sizeof(size_t) * n_clusters; i++) {
-        *((char*)root_file + i) = storage[i];
+        *((char*)root_file + i - sizeof(size_t) * n_clusters) = storage[i];
     }
 
     for (size_t i = 0; i < n_clusters; i++) {
