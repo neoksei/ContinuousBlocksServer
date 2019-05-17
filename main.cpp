@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 #include <zmq.hpp>
-#include <zmq.h>
 
 
 int main() {
